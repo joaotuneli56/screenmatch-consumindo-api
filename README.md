@@ -83,5 +83,3 @@ A API OMDB é a fonte principal de dados para este projeto. A documentação com
 5. **Adicione a Chave SSH ao GitHub:**
    - Vá para as configurações de SSH do GitHub.
    - Adicione uma nova chave SSH, colando o conteúdo copiado.
-
-```
