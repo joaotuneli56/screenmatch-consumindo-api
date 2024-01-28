@@ -84,11 +84,4 @@ A API OMDB é a fonte principal de dados para este projeto. A documentação com
    - Vá para as configurações de SSH do GitHub.
    - Adicione uma nova chave SSH, colando o conteúdo copiado.
 
-Agora você deve ser capaz de clonar repositórios usando SSH. Se você ainda preferir usar HTTPS, siga as instruções iniciais de clonagem mencionadas acima.
 ```
-
-Agora, este conteúdo está formatado em Markdown. Você pode copiar e colar diretamente em um arquivo com extensão ".md".
-
-
-
-Este projeto é uma oportunidade de aplicar e consolidar os conhecimentos adquiridos no curso de Programação Orientada a Objetos, proporcionando uma prática valiosa na manipulação de objetos, tratamento de exceções e integração de APIs em Java.
