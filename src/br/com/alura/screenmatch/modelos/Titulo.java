@@ -6,23 +6,23 @@ import com.google.gson.annotations.SerializedName;
 public class Titulo implements Comparable<Titulo> {
 
     private String nome;
-    private int anoDeLancamento;
+    private String anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
-    public Titulo(String nome, int anoDeLancamento) {
+    public Titulo(String nome, String anoDeLancamento) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
     }
 
     public Titulo(TituloOMDB titulo) {
         this.nome = titulo.title();
+        this.anoDeLancamento = titulo.year().contains("-") ? titulo.year().split("-")[0] : titulo.year();
         if (titulo.year().length() > 4){
             throw  new ErroDeConversãoDeAnoException("Não consegui converter o ano porque tem mais de 04 caracteres.");
         }
-        this.anoDeLancamento = Integer.valueOf(titulo.year());
         this.duracaoEmMinutos = Integer.valueOf(titulo.runtime().substring(0,2));
 
     }
@@ -31,7 +31,7 @@ public class Titulo implements Comparable<Titulo> {
         return nome;
     }
 
-    public int getAnoDeLancamento() {
+    public String getAnoDeLancamento() {
         return anoDeLancamento;
     }
 
@@ -51,7 +51,7 @@ public class Titulo implements Comparable<Titulo> {
         this.nome = nome;
     }
 
-    public void setAnoDeLancamento(int anoDeLancamento) {
+    public void setAnoDeLancamento(String anoDeLancamento) {
         this.anoDeLancamento = anoDeLancamento;
     }
 
@@ -84,7 +84,9 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "Nome='" + nome + '\'' +
-                ", Ano de lancamento=" + anoDeLancamento + "," + " duracao: " + duracaoEmMinutos;
+        return  "\n"+ "{[ TITULO ]" + "\n" +
+                "Nome =" + nome + "\n" +
+                "Ano =" + anoDeLancamento + "\n" +
+                "Duracao: " + duracaoEmMinutos + " min} " + "\n";
     }
 }
