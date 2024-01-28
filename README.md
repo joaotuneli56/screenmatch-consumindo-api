@@ -21,6 +21,9 @@ O objetivo principal desta aplicação é permitir aos usuários consultar infor
 
 O projeto foi desenvolvido em Java, aproveitando os princípios de Programação Orientada a Objetos. Além disso, a integração com a API OMDB foi realizada de forma eficiente para garantir uma experiência de consulta de filmes fácil e intuitiva.
 
+Tambem foi utilizado a biblioteca GSON da google, para serialização e deserialização de Objetos.
+<https://mvnrepository.com/artifact/com.google.code.gson/gson>
+
 ### Documentação da API OMDB
 
 A API OMDB é a fonte principal de dados para este projeto. A documentação completa pode ser encontrada [aqui](https://omdbapi.com/), fornecendo detalhes sobre os endpoints disponíveis, parâmetros de consulta e exemplos práticos de uso.
