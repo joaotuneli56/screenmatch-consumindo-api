@@ -1,6 +1,6 @@
 # screenmatch-consumindo-api
 
-# Projeto de Consulta de Filmes utilizando a API OMDB
+## Projeto de Consulta de Filmes utilizando a API OMDB
 
 ## Descrição do Projeto
 
